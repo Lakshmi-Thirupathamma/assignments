@@ -1,0 +1,15 @@
+<div class="alert alert-success" *ngIf='message'{{message}}></div>
+<div class="col-md-4 mt-4">
+<ng-container *ngFor='let product of products'>
+    <div class="card">
+        <div class="card-body">
+            <img [src]="product.producturl" alt="Image Not Available" width = "100%">
+            <p>{{product.productName}}</p>
+            <p>{{product.productDescription}}</p>
+            <button class="btn btn-outline-primary" (click) = 'selectProduct(product)'>Update</button>
+            <button class="btn btn-outline-dark float-right" (click) = 'deleteProduct(product)'>Delete</button>
+            
+        </div>
+    </div>
+</ng-container>
+</div>
